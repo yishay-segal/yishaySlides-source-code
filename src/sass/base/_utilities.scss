@@ -1,0 +1,113 @@
+.left-mar{margin-left: 5px;}
+.top-mar{margin-top: 5px;}
+.right-mar{margin-right: 5px;}
+.unfocus{&:focus{outline: none;}}
+.display{ width: 27rem!important;}
+.focus{box-shadow: 0 0 10px rgba(0,0,0,.15); background-color: white !important;}
+.pad-top{padding-top: 10px;}
+.dis-menu{display: block !important;}
+.dis-none{display: none !important;}
+.click{background-color: rgba(60,64,67,0.08);}
+.hd__sc{
+    color: black;
+    font: 500 16px/22px Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    letter-spacing: .29px;
+    text-overflow: clip;
+    overflow: hidden;
+}
+
+.dc__sc{
+    color: #5f6368;
+    font: 400 14px/19px Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    letter-spacing: normal;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.a__btn{
+    text-decoration: none;
+    border: 1px solid #dadce0;
+    border-radius: 100px;
+    display: inline-block;
+    font: 500 14px/16px Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    letter-spacing: .25px;
+    margin: 16px 0 0;
+    max-width: 254px;
+    outline: 0;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #3c4043;
+}
+.a__btn:hover{
+    background-color: #f7f8f8;
+}
+
+.a_link{
+    text-decoration: none;
+    width: 100%;
+    @include flex-align;
+    color: black;
+    span{
+        font-size: 1.6rem;
+        margin-left: 10px;
+        display: table-cell;
+        font-family: Roboto,Arial,sans-serif!important;
+    }
+}
+
+
+.div-pr{
+    width: 100%;
+    padding: 14px 41px;
+}
+.float-left{float: left; width: fit-content;}
+
+.logo-slides{
+    border-radius: 50%;
+    margin: 4px 0 4px 8px !important;
+    padding: 8px !important;
+    transform: translateY(-10px);
+}
+.z-mar-rt{
+    margin-right: 0 !important;
+}
+.z-mar-lf{
+    margin-left: 0 !important;
+}
+.pad-rt{padding-right: 3px !important;}
+.toolbar-minW{min-width: 26px;}
+.docs-icon{
+    display: inline-block;
+    height: 18px !important;
+    width: 18px;
+    margin: 0 0 1px 0;
+    direction: ltr;
+    text-align: left;
+    overflow: hidden;
+    vertical-align: middle;
+    margin-top: 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.line-svg-r{
+    stroke: green;
+    stroke-width: 3;
+    stroke-dasharray: 3, 3;
+}
+
+.line-svg-n{
+    stroke: gray;
+    stroke-width: 1;
+}
+
+.start-lines{
+    stroke: #dadce0;
+    stroke-width: 2;
+    opacity: 0.765;
+    stroke-miterlimit: 2;
+}

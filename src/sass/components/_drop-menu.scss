@@ -1,0 +1,183 @@
+.drop__menu{
+    position: absolute;
+    height: 440px;
+    display: none;
+    width: 315px;
+    background-color: white;
+    @include box-shadow;
+    right: -4rem;
+    top: 4rem;
+    border-radius: 10px;
+    &-box{
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        // padding-left: 16px;
+        padding: 20px;
+        column-gap: 5px;
+        row-gap: 5px;
+    }
+    &-item{
+        @include flex-align;
+        justify-content: center;
+        border-radius: 10px;
+        &:hover{
+            background-color: rgba( skyblue, $alpha: .3);
+        }
+        a{
+            text-decoration: none;
+            text-align: center;
+            padding: 5px;
+        }
+        p{
+            color: gray;
+            font-size: 1.4rem;
+        }
+    }
+    &-icon{
+        height: 55px;
+        width: 55px;
+        padding: 5px;
+    }
+    .item-acc{
+        img{
+            border-radius: 50%;
+        }
+    }
+}
+
+.drop__account{
+    display: none;
+    position: absolute;
+    height: fit-content;
+    width: 355px;
+    background-color: white;
+    @include box-shadow;
+    right: 1rem;
+    top: 6rem;
+    border-radius: 6px;
+    &-cont{
+        height: 100%;
+        width: 100%;
+        padding: 8px;
+    }
+    &-header{
+        @include flex-align;
+        flex-direction: column;
+        height: 190px;
+        width: 290px;
+        margin: 20px 33px;
+    }
+    &-img{
+        height: 86px;
+        width: 86px;
+        margin-top: 6px;
+        position: relative;
+        img{
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+    &-icon{
+        height: 35px;
+        width: 35px;
+        background-color: white;
+        border-radius: 50%;
+        @include flex-just;
+        align-items: center;
+
+        position: absolute;
+        z-index: 100;
+        bottom: -5px;
+        right: 2px;
+        path{
+            color: gray;
+            fill: currentColor;
+            
+        }
+        &:hover{
+            path{
+                color: #1a73e8;
+            }
+        }
+    }
+}
+
+.drop__account{
+    &-d{
+        margin-top: 6px;
+    }
+    &-deta{
+        text-align: center;
+    }
+}
+
+.icon-box{
+    @include box-shadow;
+    @include flex-just;
+    border-radius: 50%;
+    height: 26px;
+    width: 26px;
+}
+
+.drop__account{
+    font-family: Roboto,Arial,sans-serif;
+    &-ab{
+        border-top: 1px solid #e8eaed;
+        border-bottom: 1px solid #e8eaed;
+    }
+    &-add{
+        @include fhover;
+        svg{
+            height: 25px;
+            width: 25px;
+            path{
+                color: gray;
+                fill: currentColor;
+            }
+        }
+    }
+
+    &-so{
+        border-top: 1px solid #e8eaed;
+        border-bottom: 1px solid #e8eaed;
+        padding: 0 17px;
+        text-align: center;
+        a{
+            @include fhover;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            display: inline-block;
+            letter-spacing: .15px;
+            margin: 16px;
+            outline: 0;
+            padding: 10px 24px;
+            text-decoration: none;
+            text-align: center;
+            color: black;
+            font-size: 1.4rem;
+        }
+    }
+
+    &-fo{
+        color: black;
+        margin: 14px 33px;
+        text-align: center;
+        white-space: normal;
+        font-size: 1.2rem;
+        & a{
+            border-radius: 4px;
+            color: gray;
+            display: inline-block;
+            outline: none;
+            padding: 4px 8px;
+            text-decoration: none;
+            text-align: center;
+            &:hover{
+                color: black;
+            }
+        }
+    }
+}

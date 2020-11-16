@@ -1,0 +1,92 @@
+.sidenav {
+    display: block;
+    height: 100%;
+    // width: 27rem;// need to change
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: all 0.4s;
+    padding-top: 5px;
+    box-shadow: 0 0 16px rgba(0,0,0,.28);
+}
+  
+.sidenav a {
+    // padding: 8px;
+    // padding-left: 1.5rem;
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    &:first-child {
+        padding: 0 4px 0 2rem;
+    }
+}
+  
+.sidenav .sidenav__box:hover {
+    background-color: rgba(gray , $alpha: .2);
+}
+
+.sidenav{
+    width: 0;
+    user-select: none;
+    &__cont{
+        position: relative;
+        height: 100%;
+    }
+    &__name{
+        height: 3rem;
+        width: 8rem;
+    }
+    & a .sidenav__box{
+        @include flex-align;
+        padding: 9px 0 9px 24px;
+        cursor: pointer;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin-right: 5px;
+    }
+    &__hbox{
+        @include flex-align;
+        padding: 2rem;
+
+    }
+    &__header{
+        font-size: 2.2rem;
+        color: rgb(60, 64, 67);
+        margin-left: 10px;
+    }
+    &__icons{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    &__desc{
+        font-size: 1.5rem;
+        color: black;
+        font-weight: 500;
+        margin-left: 16px;
+    }
+    &__fotter{
+        @include flex-align;
+        width: 100%;
+        position: absolute;
+        bottom: 25px;
+        justify-content: center;
+
+        & a{
+            font-size: 1.2rem;
+            padding: 0 !important;
+            &:hover{
+                color: black;
+            }
+        }
+    }
+}
+  
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 5px;}
+    .sidenav a {font-size: 18px;}
+}

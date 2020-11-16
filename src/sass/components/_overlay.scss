@@ -1,0 +1,62 @@
+.overlay {
+    position: fixed; 
+    z-index: 900;
+    bottom: 50px;
+    left: 50px;
+    background-color: #323232;
+    width: 400px;
+    height: 100px;
+    border-radius: 6px;
+    &__cont{
+        width: 100%;
+        height: 100%;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        user-select: none;
+        justify-content: space-around;
+    }
+}
+
+.arrow-left {
+    color: gray;
+    font-size: 3.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    @include w-hover;
+}
+
+.arrow-right {
+    color: gray;
+    font-size: 3.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-left: 20px;
+    @include w-hover;
+}
+
+.exit {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: gray;
+    @include w-hover;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.color-icon {
+    transition: background-color .2;
+    &:hover {
+        background-color: white !important;
+        border-radius: 100%;
+    }
+}
+
+.dark-mode {
+    background-color: black !important;
+    color: white !important;
+}
+
+.fill-dark {
+    fill: black !important;
+}
+

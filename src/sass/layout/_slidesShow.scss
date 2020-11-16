@@ -1,0 +1,217 @@
+html,body{
+    height: 100%;
+    overflow: hidden;
+}
+main{
+    height: calc(100% - 94px - 15px)
+}
+.slides{
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    &__cont{
+        width: 100%;
+        display: flex;
+        // height: calc(100% - 94px - 15px) !important;
+        height: 100%;
+    }
+    &__film{
+        padding: 0;
+        position: relative;
+        width: 219px;
+        &-cont{
+            width: 219px;
+            height: calc(100% - 94px - 15px);
+        }
+        &-scroll{
+            width: 219px;
+            height: 100%;
+            border-right: 1px solid #d9d9d9;
+            display: inline-block;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            user-select: none;
+            margin-right: 5px;
+        }
+        #box-film{
+            user-select: none;
+        }
+    }
+    &__edit{
+        position: relative;
+        padding: 0;
+        width: calc(100% - 56px - 219px);
+        height: 100%;
+        #svg963{
+            height: 100%;
+            width: 100%;
+            background-color: #f1f3f4;
+        }
+    }
+}
+
+.box-film{
+    stroke: #dadce0;
+    fill: white;
+}
+.film{
+    &__text-title{
+        word-wrap: break-word;
+        
+    }
+}
+
+.film-num{
+    fill: #000;
+    font-size: 12px;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    opacity: 0.54;
+    font-weight: 500;
+}
+#layer1{
+    transform: translate(10%, 9%) scale(0.8);
+}
+
+.box-edit{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    .para-edit{
+        color: black;
+        font-size: 2.8rem;
+        width: 100%;
+        height: 100% !important;
+        height: fit-content;
+        resize: none;
+        outline: none;
+        border: none;
+        overflow: hidden;
+        font-family: Roboto, sans-serif;
+        &:focus{
+            outline: none;
+        }
+    }
+}
+
+.text-film {
+    // color: black;
+    font-size: 2.8rem;
+    width: 100%;
+    height: 100% !important;
+    height: fit-content;
+    overflow: hidden;
+    font-family: Roboto, sans-serif;
+    word-wrap: break-word;
+}
+
+.y-b{
+    fill: lightgoldenrodyellow;
+}
+
+.present{
+    &__cont{
+        align-items: center;
+        background-color: #fff;
+        display: flex;
+        height: 64px;
+        padding: 0 12px 0 16px;
+        top: 0;
+        z-index: 900;
+        position: absolute;
+        right: 80px;
+        text-align: right;
+        vertical-align: middle;
+        white-space: nowrap;
+        
+    }
+
+    &__box{
+        display: inherit;
+        margin-right: 8px;
+        border-radius: 4px;
+        @include fhover;
+    }
+
+    &__outterBox {
+        user-select: none;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 14px;
+        height: 36px;
+        letter-spacing: 0.25px;
+        line-height: 16px;
+        color: black;
+        border-right: 1px transparent solid!important;
+        padding: 9px 11px 10px 12px;
+        text-transform: none;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        border: 1px solid #dadce0!important
+    }
+
+    &__innerBox {
+        margin: 4px 8px 0 1px;
+        height: 18px;
+        width: 18px;
+        overflow: hidden;
+        vertical-align: middle;
+        direction: ltr;
+        text-align: left;
+        position: relative;
+        display: inline-block;
+    }
+
+    &__icon {
+        position: absolute;
+        height: 6437px;
+        width: 74px;
+        left: -40px;
+        top: -2362px;
+        display: block;
+        text-align: left;
+        white-space: nowrap;
+        &::before{
+            content: url('../images/material_common_sprite217_grey_dark.svg');
+        }
+    }
+}
+
+.pop__menu {
+    position: absolute;
+    z-index: 400;
+    box-shadow: 0 2px 6px 2px rgba(60,64,67,.15);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 200px;
+    background-color: white;
+
+    top: 50px;
+    left: 30px;
+    padding: 3px 0;
+    &-cut{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        span {
+            padding: 2px 5px;
+            font-weight: 100;
+            font-size: 1.8rem;
+            text-transform: capitalize;
+        }
+        &:hover {
+            @include fhover;
+        }
+    }
+}
+
+.cut-icon {
+    width: 35px;
+    height: 35px;
+}

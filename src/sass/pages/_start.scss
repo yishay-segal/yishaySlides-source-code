@@ -1,0 +1,212 @@
+.start{
+    height: 220px;
+    background-color: #f1f3f4;
+    &__cont{
+        margin: 0 auto;
+        height: 100%;
+        width: 1140px;
+        display: grid;
+        @include flex-align;
+    }
+
+    &__box{
+        @include flex-just;
+        flex-direction: column;
+        width: fit-content;
+        height: fit-content;
+        user-select: none;
+        margin-left: 7px;
+        img{
+            @include border;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            height: 96px;
+            width: 171px;
+            &:hover{
+                border-color: #f7c638;
+            }
+        }
+
+        span{
+            font-size: 14px;
+            height: 19px;
+            font-weight: 500;
+        }
+    }
+}
+
+@media only screen and(min-width: 1400px){
+    .start{
+        &__cont{
+            width: 1140px;
+        }
+        &__box{
+            img{
+                height: 96px;
+                width: 171px;
+            }
+        }
+    }
+}
+
+.title__bar{
+    overflow: hidden;
+    position: relative;
+    margin-top: 15px;
+    &-cont{
+        display: flex;
+    }
+    &-icons{
+        height: fit-content;
+        overflow: hidden;
+        width: fit-content;
+    }
+    &-iconCont{
+        margin-top: 1px;
+        padding: 0 3px;
+        vertical-align: top;
+        display: inline-block;
+        white-space: nowrap;
+        position: relative;
+    }
+    &-iconBox{
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        color: black;
+        cursor: pointer;
+        font-weight: 500;
+        height: 24px;
+        position: relative;
+        user-select: none;
+        vertical-align: baseline;
+        @include fhover;
+    }
+    &-insideIcon{
+        display: block;
+        height: 18px;
+        margin: 3px;
+        overflow: hidden;
+        position: relative;
+        text-align: left;
+        width: 18px;
+    }
+    &-icon{
+        z-index: auto;
+        height: 6110px;
+        position: absolute;
+        overflow: hidden;
+        width: 74px;
+        &::before{
+            content: url('../images/material_common_sprite211_grey_medium.svg');
+        }
+    }
+    &-input{
+        input{
+            width: 175px;
+            @include border-trans;
+            border-radius: 2px;
+            font-size: 18px;
+            height: 20px;
+            line-height: 22px;
+            margin: 0;
+        }
+    }
+}
+
+.tags__bar{
+    white-space: nowrap;
+    &-cont{
+        user-select: none;
+        margin-left: 0px;
+        height: 31px;
+        cursor: default;
+        display: inline-block;
+        position: relative;
+    }
+    &-item{
+        @include border-trans;
+        border-radius: 4px;
+        color: #202124;
+        cursor: pointer;
+        font-size: 14px;
+        letter-spacing: .2px;
+        padding: 4px 6px;
+        display: inline-block;
+        position: relative;
+        @include fhover;
+    }
+}
+
+.toolbar{
+    width: calc(100% - 99px);
+    padding: 0 21px 0 22px;
+    border-top: 1px solid #dadce0;
+    border-bottom: 1px solid #dadce0;
+    min-height: 35px;
+    position: relative;
+    &__cont{
+        // max-width: calc(100% - 106px);
+        max-width: 1430px;
+    }
+    &__icons{
+        user-select: none;
+        min-height: 38px;
+        background: none;
+        border-width: 0;
+        display: inline;
+        outline: 0;
+        padding: 0;
+        zoom: 1;
+    }
+    &__iconBox{
+        height: 24px;
+        line-height: 24px;
+        margin: 6px 1px;
+        font-size: 12px;
+        font-weight: 500;
+        vertical-align: middle;
+        display: inline-block;
+        border-radius: 2px;
+        border-width: 1px;
+    }
+    &__outerBox{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        vertical-align: top;
+        position: relative;
+        display: inline-block;
+        line-height: 24px;
+        white-space: nowrap;
+        height: 24px;
+    }
+    &__innerBox{
+        user-select: none;
+        min-width: 26px;
+        height: 24px;
+        padding: 0;
+        text-align: center;
+        position: relative;
+        display: inline-block;
+        line-height: 24px;
+        font-weight: 500;
+        font-size: 12px;
+        overflow: hidden;
+    }
+    &__icon{
+        height: 6110px;
+        position: absolute;
+        width: 74px;
+        overflow: hidden;
+        &::before{
+            content: url('../images/material_common_sprite211_grey_medium.svg');
+        }
+    }
+    .plus-icon{
+        background-color: #f1f3f4;
+    }
+}
+
+// matrix(6.123233995736766e-17,-1,1,6.123233995736766e-17,-266218.5164835165,131696.20879120877)
+// matrix(6.123233995736766e-17,-1,1,6.123233995736766e-17,459523.6813186813,74043.79120879121)

@@ -1,0 +1,41 @@
+@mixin flex-align {
+    display: flex;
+    align-items: center;
+}
+
+@mixin hover {
+    transition: background-color .15s;
+    &:hover{
+        background-color: rgba(60,64,67,0.08);
+        border-radius: 50%;
+    }
+}
+
+@mixin fhover {
+    transition: background-color .15s;
+    &:hover{
+        background-color: rgba(60,64,67,0.08);
+    }
+}
+
+@mixin box-shadow {
+    box-shadow: 0 0 16px rgba(0,0,0,.28)
+}
+
+@mixin flex-just {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin border {
+    border: 1px solid #dadce0;
+}
+@mixin border-trans {
+    border: 1px solid transparent;
+}
+
+@mixin w-hover {
+    &:hover {
+        color: white !important;
+    }
+}

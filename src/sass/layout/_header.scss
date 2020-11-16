@@ -1,0 +1,118 @@
+.header{
+    height: 11vh;
+    width: 100%;
+    @include flex-align;
+    justify-content: space-between;
+
+    &__box{
+        display: flex;
+        padding: 1.5rem 2rem;
+        &-logo{
+            @include flex-align;
+            cursor: pointer;
+        }
+    }
+
+    &__search{
+        transform: translateX(-10%);
+        @include flex-align;
+        background-color: #f1f3f4;
+        width: 50%;
+        padding: 3px 10px;
+        border-radius: 10px;
+        transition: all .3s;
+
+        &-box{
+            padding: 6px;
+            border-radius: 50%;
+            @include hover;
+
+        }
+        &-icon{
+            cursor: pointer;
+            height: 24px !important;
+            width: 24px !important;
+            border-radius: 50%;
+        }
+
+        &-input{
+            border: none;
+            outline: none;
+            background-color: inherit;
+            padding: 8px 5px;
+            font-size: 20px;
+            width: 100%;
+            border: 1px solid transparent;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+
+    &__logo{
+        height: 4rem !important;
+        width: 4rem !important;
+    }
+
+    &__text{
+        font-size: 2rem;
+        margin-left: 6px;
+    }
+
+    &__side{
+        @include flex-align;
+        padding: 8px;
+        width: 10rem;
+        // margin-right: 10px;
+        justify-self: flex-end;
+        &-box{
+            padding: 5px;
+            @include hover;
+            border-radius: 50%;
+            position: relative;
+            svg{
+                height: 24px !important;
+                width: 24px !important;
+            }
+        }
+        &-box2{
+            padding: 1px 5px;
+            border-radius: 50%;
+            @include hover;
+        }
+        &-img{
+            height: 4rem;
+            @include flex-align;
+            img{
+                height: 3.1rem;
+                width: 3.1rem;
+                shape-outside: circle(50% at 50% 50%);
+                clip-path: circle(50% at 50% 50%);
+            }
+        }
+    }
+}
+
+@media all and (max-width: 720px) {
+    .header__logo{display: none;}
+    .header__search{
+        background-color: transparent;
+        position: relative;
+        
+        &-box{
+            position: absolute;
+            right: -20%;
+            border-radius: 50%;
+            @include hover;
+            margin-right: 6px;
+        }
+        input{
+            display: none;
+        }
+    }
+    .header__side-box{
+        display: none;
+    }
+
+}
+

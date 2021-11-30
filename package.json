@@ -30,6 +30,7 @@
     "webpack-merge": "^5.1.4"
   },
   "dependencies": {
+    "@types/webpack": "^4.41.25",
     "clean-webpack-plugin": "^3.0.0"
   }
 }
